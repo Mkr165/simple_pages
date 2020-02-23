@@ -1,0 +1,151 @@
+body{
+    top: 0px;
+    left: 0px;
+    height: 1086px;
+    background: #F1F2F1 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin: 0 auto;
+}
+
+.container {
+	display: flex;
+   
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.perguntas{
+    position: relative;
+    top: 116px; 
+   
+}
+.perguntas h1{
+    padding-left: 9%; 
+    height: 19px;
+    text-align: left;
+    font: Bold 16px/19px Trebuchet MS;
+    letter-spacing: 0;
+    color: #60656C;
+    opacity: 1;
+}
+.pergunta{
+    height: 203px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 6px #00000008;
+    opacity: 1;
+}
+
+.conteudo{
+    position: relative;
+    margin-left: 9%;
+    padding-top: 1%;
+    margin-right: 9%;
+}
+
+.conteudo span{
+    
+    text-align: left;
+    font: Bold 12px/14px Trebuchet MS;
+    letter-spacing: 0;
+    color: #BEBEBE;
+    opacity: 1;
+}
+
+.conteudo p{
+    text-align: left;
+    font: Bold 16px/24px Trebuchet MS;
+    letter-spacing: 0;
+    color: #60656C;
+    opacity: 1;
+}
+
+.buttons{
+    align-items: center;
+    float: right;
+    
+ }
+
+ .button{
+    background-color: #F1F2F1; 
+    border: none;
+    color: #60656C;
+    box-shadow: 0px 2px 6px #00000008;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: Bold 16px/19px Trebuchet MS;
+    margin-top: 4px;
+    margin-right: 10px;
+    margin-bottom: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    
+    width: 155px;
+    height: 46px;
+    
+ }
+ .interacoes{
+    width: 91%;
+    height: auto;
+    align-items: center;
+    justify-content: right;
+    padding-bottom: 2%;
+
+}
+
+.interacoes div{
+    margin-left: 40px;
+    padding-top: 5px;
+    height: 14px;
+    cursor: pointer;
+    font: Bold 12px/14px Trebuchet MS;
+    letter-spacing: 0;
+    color: #60656C;
+    opacity: 1;
+    
+}
+
+.img-interacoes{
+    width: 22px;
+    height: 18px; vertical-align: middle; }
+ hr{
+    clear: both;
+    display: block;
+    width: 100%;
+    color: #60656C36;
+ 
+}
+
+
+@media (max-width: 600px) 
+{
+    .pergunta{
+        height: auto;
+    }
+
+    .interacoes div{
+        width: 180px;
+        margin-bottom: 19px;
+       
+        
+    }
+    .pergunta span{
+         
+        top: 9%;
+    }
+    .buttons, .interacoes{
+        /*justify-content: center !important;*/
+        width: 100% !important;
+        margin: 0 auto;
+       
+    }
+    
+     
+
+    
+}
+
+ 

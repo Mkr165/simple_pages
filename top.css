@@ -1,0 +1,100 @@
+ .top{
+    top:0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  
+    
+} 
+
+.menu{ 
+    position: relative;
+    height: 60px;
+    background: #00995D 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 6px #00000029;
+    z-index: 1001;
+    opacity: 1;
+    
+    
+}
+.title{
+    text-align: center;
+    position: relative;
+    font: 24px/28px Trebuchet MS;
+    letter-spacing: -0.65px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.back{
+   
+    position: relative;
+    top: 38%;
+    left: 9%;
+    width: 75px;
+    height: 16px;
+    text-align: left;
+    font: Bold 18px/16px Trebuchet MS;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+
+}
+
+.img-back{
+    
+    width: 15px; 
+    height:15px;
+
+}
+
+.icon-search {
+      
+    width: 18px; 
+    height:18px;
+  }
+  
+.search{
+    position: relative;
+    left: 89%;
+    top:-38%;
+    text-align: left;
+     
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.abas{
+    position: relative;
+    box-shadow: inset 0px 4px 30px -19px rgba(0,0,0,0.75);
+  
+       
+}
+.tabs{
+    
+    text-align: center;
+    flex: 1; 
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 6px #00000008;
+    opacity: 1
+    
+}
+
+.tabs a{
+    text-decoration: none;
+    font: Bold 14px/40px Trebuchet MS;
+    letter-spacing: 0;
+    color: #60656C;
+    opacity: 1;
+}
+
+.tabs a:hover{
+    color: #00995D;
+}
+
+.tabs a:active {
+    color: #00995D;
+}
+
