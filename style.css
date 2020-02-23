@@ -21,7 +21,7 @@ body{
     top: 116px; 
    
 }
-.perguntas h1{
+ h1{
     padding-left: 9%; 
     height: 19px;
     text-align: left;
@@ -87,11 +87,19 @@ body{
     height: 46px;
     
  }
- .interacoes{
-    width: 91%;
+
+ hr{
+    clear: both;
+    display: block;
+    width: 100%;
+    color: #60656C36;
+ 
+}
+.interacoes{
+     
     height: auto;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
     padding-bottom: 2%;
 
 }
@@ -111,14 +119,6 @@ body{
 .img-interacoes{
     width: 22px;
     height: 18px; vertical-align: middle; }
- hr{
-    clear: both;
-    display: block;
-    width: 100%;
-    color: #60656C36;
- 
-}
-
 
 @media (max-width: 600px) 
 {
@@ -137,7 +137,7 @@ body{
         top: 9%;
     }
     .buttons, .interacoes{
-        /*justify-content: center !important;*/
+        justify-content: center !important;
         width: 100% !important;
         margin: 0 auto;
        
@@ -146,6 +146,21 @@ body{
      
 
     
+}
+
+.button2 button{
+      color: green !important;
+}
+.ativo{
+      
+    outline:0;border-bottom: 5px solid green;
+}
+.display{
+    display:none;
+}
+.respostas{
+    position: relative;;
+    top: 116px; 
 }
 
  
