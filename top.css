@@ -5,8 +5,9 @@
     z-index: 1000;
   
     
-} 
-
+}
+ 
+  
 .menu{ 
     position: relative;
     height: 60px;
@@ -27,7 +28,7 @@
 }
 
 .back{
-   
+    vertical-align: middle;
     position: relative;
     top: 38%;
     left: 9%;
@@ -41,16 +42,20 @@
 
 }
 
+.back span{
+    vertical-align: middle;
+}
 .img-back{
     
     width: 15px; 
     height:15px;
+    vertical-align: middle;
 
 }
 
 .icon-search {
-      
-    width: 18px; 
+    cursor: pointer;
+     width: 18px; 
     height:18px;
   }
   
@@ -71,6 +76,13 @@
   
        
 }
+
+.ativo{
+    
+    outline:0;
+    border-bottom: 5px solid green;
+}
+
 .tabs{
     
     text-align: center;
@@ -102,4 +114,9 @@
     color: #00995D;
     outline:0;
 } 
- 
+
+@media (max-width: 350px) {
+    .back span{
+        display: none;
+    }
+} 
