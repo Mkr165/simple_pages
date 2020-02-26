@@ -2,26 +2,36 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta id="viewport" name="viewport" content ="width=device-width" />
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="top.css">
-        <meta id="viewport" name="viewport" content ="width=device-width" />  
+        <link rel="stylesheet" type="text/css" href="barra.css">
+        <link rel="stylesheet" type="text/css" href="conteudo.css">
+        
     </head>
-    <body>            
+    <body  >            
         <section class="top">
-            <div class="menu">
-                <div class="back"> <img class="img-back" src="img/back.svg"> Voltar</div>
-                <div class="title">Administrativo</div>
-                <div class="search"><img  class="icon-search" src="img/search.svg"></div> 
+            <form id="form" class="display container">
+                <input type="text" name="search" placeholder="Insira o nome ou ID da perícia...">
+                <span onclick="mostraform('form','0')"> <img src="img/x.svg"></span>
+                 
+            </form>     
+            <div id="menu" class="menu">
+                    <div class="back"> <img class="img-back" src="img/back.svg"><span>Voltar</span> </div>
+                    <div class="title">Administrativo</div>
+                    <div class="search" >
+                        <img onclick="mostraform('form','1')" class="icon-search" src="img/search.svg">
+                    </div>
             </div>
             <div class="container wrap abas">
-                <div  id="bnt1" onclick="myFunction('tab1','bnt1','bnt2')" class="tabs ativo">
+                <div  id="bnt1" onclick="mostratabs('tab1','bnt1','bnt2')" class="tabs ativo">
                     <button autofocus>RESTANTES (1)</button>
                 </div> 
-                <div id="bnt2" onclick="myFunction('tab2','bnt1','bnt2');" class="tabs"> 
+                <div id="bnt2" onclick="mostratabs('tab2','bnt1','bnt2');" class="tabs"> 
                     <button>RESPONDIDAS (2)</button>
                 </div> 
-            </div >
-        </section > 
+            </div>
+        </section> 
         
         <section id="tab1" class="perguntas ">
             <h1>DOCUMENTAÇÕES MANDATÓRIAS</h1>
@@ -30,8 +40,8 @@
                     <span>1.1.1.1</span>
                     <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
                     <div class="buttons container wrap">
-                        <button class="button sim">SIM</button> 
-                        <button class="button nao">NÃO</button>
+                        <button id="sim1" value="sim1" onclick="colorebtn(this.id)" class="button">SIM</button> 
+                        <button id="nao1" value ="nao1" onclick="colorebtn(this.id)" class="button">NÃO</button>
                     </div>
                     <hr> 
                     <div class="interacoes container wrap">
@@ -40,7 +50,39 @@
                     </div> 
               </div>        
             </div>
-            <br>                       
+            <br>
+            <div class="pergunta">
+                <div class="conteudo ">
+                    <span>1.1.1.1</span>
+                    <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
+                    <div class="buttons container wrap">
+                        <button id="sim2" value="sim2" onclick="colorebtn(this.id)" class="button">SIM</button> 
+                        <button id="nao2" value ="nao2" onclick="colorebtn(this.id)" class="button">NÃO</button>
+                    </div>
+                    <hr> 
+                    <div class="interacoes container wrap">
+                        <div> <img class="img-interacoes" src="img/camera.svg"> ENVIAR EVIDÊNCIA</div> 
+                        <div> <img class="img-interacoes" src="img/message-square.svg"> FAZER COMENTÁRIO</div>
+                    </div> 
+              </div>        
+            </div>
+            <br>
+            <div class="pergunta">
+                <div class="conteudo ">
+                    <span>1.1.1.1</span>
+                    <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
+                    <div class="buttons container wrap">
+                        <button id="sim3" value="sim3" onclick="colorebtn(this.id)" class="button">SIM</button> 
+                        <button id="nao3" value ="nao3" onclick="colorebtn(this.id)" class="button">NÃO</button>
+                    </div>
+                    <hr> 
+                    <div class="interacoes container wrap">
+                        <div> <img class="img-interacoes" src="img/camera.svg"> ENVIAR EVIDÊNCIA</div> 
+                        <div> <img class="img-interacoes" src="img/message-square.svg"> FAZER COMENTÁRIO</div>
+                    </div> 
+              </div>        
+            </div>
+            <br>                           
         </section>
 
         <section id="tab2" class="respostas display">
@@ -50,8 +92,8 @@
                     <span>1.1.1.1</span>
                     <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
                     <div class="buttons container wrap">
-                        <button class="button sim">SIM</button> 
-                        <button class="button nao">NÃO</button>
+                        <button id="sim1"onclick="colorebtn(this.id)" class="button sim">SIM</button> 
+                        <button id="nao1"onclick="colorebtn(this.id)" class="button nao">NÃO</button>
                     </div>
                     <hr> 
                     <div class="interacoes container wrap">
@@ -78,8 +120,19 @@
             </div>
             <br>           
         </section>
+        <section>
+            <footer>
+                <div class="salvar">
+                    <img class="img-salvar" src="img/save.svg">
+                    <span>CONFIRMAR RESPOSTAS (1)</span>
+                </div>
+                <div class="fechar">
+                    FECHAR
+                </div>
+            </footer>
+        </section>
         <script>
-            function myFunction(tab,id1,id2) {
+            function mostratabs(tab,id1,id2) {
  
                 var element = document.getElementById("tab1");
                 var element2 = document.getElementById("tab2");
@@ -103,7 +156,49 @@
                 }
             
             }
-            </script>
+
+            function mostraform(id,estado) {
+                var element = document.getElementById(id);
+                var element2 = document.getElementById('menu');
+                if(estado=='1')
+                {                    
+                    element.classList.remove("display");
+                    element2.classList.add("display");                      
+                }
+                else{
+                    element2.classList.remove("display");
+                    element.classList.add("display");                     
+                }
+            }
+             
+             
+            function colorebtn(id) {
+
+                var element =document.getElementById(id);
+                var id_2 = element.value.substring(3,4); 
+               
+                if( element.value.indexOf("sim") > -1)
+                {
+                    var element2= document.getElementById("nao"+id_2);
+                    element.classList.add("sim")
+                    if(element2.classList.contains("nao")){
+                        element2.classList.remove("nao")
+                    }
+                    
+                }
+                else {
+                    var element2= document.getElementById("sim"+id_2);
+                    element.classList.add("nao")
+                    if(element2.classList.contains("sim")){
+                        element2.classList.remove("sim")
+                    }
+                }
+
+            }
+                
+          
+
+        </script>
     </body>
 </html>
 
