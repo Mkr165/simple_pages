@@ -140,7 +140,9 @@
     color: #fff;
 }
 
- 
+.respspan{
+    color: #00995D !important;
+}
 
 @media (max-width: 600px) 
 {
