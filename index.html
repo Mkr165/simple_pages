@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta id="viewport" name="viewport" content ="width=device-width" />
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
         <link rel="stylesheet" type="text/css" href="top.css">
         <link rel="stylesheet" type="text/css" href="barra.css">
         <link rel="stylesheet" type="text/css" href="conteudo.css">
+        <link rel="stylesheet" type="text/css" href="footer.css">
         
     </head>
     <body  >            
@@ -25,17 +26,19 @@
             </div>
             <div class="container wrap abas">
                 <div  id="bnt1" onclick="mostratabs('tab1','bnt1','bnt2')" class="tabs ativo">
-                    <button autofocus>RESTANTES (1)</button>
+                    <button autofocus>RESTANTES<label id="pg_restantes" >(4)</label></button>
                 </div> 
                 <div id="bnt2" onclick="mostratabs('tab2','bnt1','bnt2');" class="tabs"> 
-                    <button>RESPONDIDAS (2)</button>
+                    <button>RESPONDIDAS<label id="pg_respondidas" >(0)</label></button>
                 </div> 
             </div>
         </section> 
         
         <section id="tab1" class="perguntas ">
-            <h1>DOCUMENTAÇÕES MANDATÓRIAS</h1>
-            <div class="pergunta">
+            <div class="titulo">
+            <h1>1.1.1 DOCUMENTAÇÕES MANDATÓRIAS</h1>
+            </div>
+            <div class="pergunta" id="p1">
                 <div class="conteudo ">
                     <span>1.1.1.1</span>
                     <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
@@ -50,11 +53,12 @@
                     </div> 
               </div>        
             </div>
-            <br>
-            <div class="pergunta">
+             
+            <div class="pergunta" id="p2">
                 <div class="conteudo ">
-                    <span>1.1.1.1</span>
-                    <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
+                    <span>1.1.1.2</span>
+                    <p>Dispõe de PCMSO (Programa de Controle Médico e Saúde Ocupacional) 
+                        assinado pelo médico responsável?</p> 
                     <div class="buttons container wrap">
                         <button id="sim2" value="sim2" onclick="colorebtn(this.id)" class="button">SIM</button> 
                         <button id="nao2" value ="nao2" onclick="colorebtn(this.id)" class="button">NÃO</button>
@@ -66,11 +70,12 @@
                     </div> 
               </div>        
             </div>
-            <br>
-            <div class="pergunta">
+            
+            <div class="pergunta" id="p3">
                 <div class="conteudo ">
-                    <span>1.1.1.1</span>
-                    <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
+                    <span>1.1.1.3</span>
+                    <p>Dispõe de alvará sanitário válido ou 
+                        protocolo de solicitação (será aceito somente para renovação de alvará do ano anterior)?</p> 
                     <div class="buttons container wrap">
                         <button id="sim3" value="sim3" onclick="colorebtn(this.id)" class="button">SIM</button> 
                         <button id="nao3" value ="nao3" onclick="colorebtn(this.id)" class="button">NÃO</button>
@@ -82,18 +87,44 @@
                     </div> 
               </div>        
             </div>
-            <br>                           
+             
+            <div class="titulo">
+                <h1>1.1.2 CERTIFICAÇÕES</h1>
+                </div>
+                <div class="pergunta" id="p4">
+                    <div class="conteudo ">
+                        <span>1.1.1.1</span>
+                        <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
+                        <div class="buttons container wrap">
+                            <button id="sim4" value="sim4" onclick="colorebtn(this.id)" class="button">SIM</button> 
+                            <button id="nao4" value ="nao4" onclick="colorebtn(this.id)" class="button">NÃO</button>
+                        </div>
+                        <hr> 
+                        <div class="interacoes container wrap">
+                            <div> <img class="img-interacoes" src="img/camera.svg"> ENVIAR EVIDÊNCIA</div> 
+                            <div> <img class="img-interacoes" src="img/message-square.svg"> FAZER COMENTÁRIO</div>
+                        </div> 
+                  </div>        
+                </div>
+                    
+                                   
         </section>
 
         <section id="tab2" class="respostas display">
-            <h1>Respostas DOCUMENTAÇÕES MANDATÓRIAS</h1>
-            <div class="pergunta">
+            <div id="empty"class="empty">
+                Nenhuma inspeção.
+            </div>
+        <div id="respondidas" class="display"> 
+        <div class="titulo">
+            <h1>1.1.1 DOCUMENTAÇÕES MANDATÓRIAS</h1>
+            </div>
+            <div class="pergunta" id="res1">
                 <div class="conteudo ">
                     <span>1.1.1.1</span>
                     <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
                     <div class="buttons container wrap">
-                        <button id="sim1"onclick="colorebtn(this.id)" class="button sim">SIM</button> 
-                        <button id="nao1"onclick="colorebtn(this.id)" class="button nao">NÃO</button>
+                        <button id="sim5" value="sim5" onclick="colorebtn(this.id)" class="button">SIM</button> 
+                        <button id="nao5" value ="nao5" onclick="colorebtn(this.id)" class="button">NÃO</button>
                     </div>
                     <hr> 
                     <div class="interacoes container wrap">
@@ -102,36 +133,52 @@
                     </div> 
               </div>        
             </div>
-            <br>
-            <div class="pergunta">
-                <div class="conteudo ">
-                    <span>1.1.1.1</span>
-                    <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
-                    <div class="buttons container wrap">
-                        <button class="button sim">SIM</button> 
-                        <button class="button nao">NÃO</button>
-                    </div>
-                    <hr> 
-                    <div class="interacoes container wrap">
-                        <div> <img class="img-interacoes" src="img/camera.svg"> ENVIAR EVIDÊNCIA</div> 
-                        <div> <img class="img-interacoes" src="img/message-square.svg"> FAZER COMENTÁRIO</div>
-                    </div> 
-              </div>        
-            </div>
-            <br>           
+           
+        </div>           
         </section>
-        <section>
+        
+        <section id="footer" class="display">
             <footer>
-                <div class="salvar">
-                    <img class="img-salvar" src="img/save.svg">
-                    <span>CONFIRMAR RESPOSTAS (1)</span>
+                <div onclick="salvar()"  class="salvar">
+                    <img  class="img-salvar" src="img/save.svg">
+                    <span> CONFIRMAR RESPOSTA <label id="labeldinamic">0</label></span>
                 </div>
-                <div class="fechar">
+                <div  onclick="fechar()" class="fechar">
                     FECHAR
                 </div>
             </footer>
         </section>
         <script>
+            var i =0; 
+            var array={};
+
+            function fechar(){
+                var footer = document.getElementById("footer");
+                footer.classList.add("display");
+            }
+
+            function salvar() {
+
+                var rests=4;
+                var aux=0
+                var restantes=document.getElementById("pg_restantes");
+                var div= document.getElementById("respondidas");
+                var div2=document.getElementById("p1");
+                var div3=document.getElementById("empty");
+                aux=rests;
+                rests=rests-i;
+                aux=aux-rests;
+                document.getElementById('pg_restantes').innerHTML = "("+rests+")"; 
+                document.getElementById('pg_respondidas').innerHTML = "("+aux+")"; 
+                div.classList.remove("display");
+                div2.classList.add("display");
+                div3.classList.add("display");
+                fechar();
+    
+            }
+            
+           
+
             function mostratabs(tab,id1,id2) {
  
                 var element = document.getElementById("tab1");
@@ -171,12 +218,27 @@
                 }
             }
              
-             
+           
+            
             function colorebtn(id) {
-
+               
                 var element =document.getElementById(id);
                 var id_2 = element.value.substring(3,4); 
+                var footer = document.getElementById("footer");
+                
+                array["button"+id_2];
+                if (array["button"+id_2] !== "true") {
+                    i=i+1;
+                    array["button"+id_2]="true"; 
+                    document.getElementById('labeldinamic').innerHTML = "("+i+")"; 
+                }
                
+                if(footer.classList.contains("display"))
+                {footer.classList.remove("display"); }                           
+                 
+                     
+
+                            
                 if( element.value.indexOf("sim") > -1)
                 {
                     var element2= document.getElementById("nao"+id_2);
@@ -195,9 +257,8 @@
                 }
 
             }
-                
-          
-
+              
+       
         </script>
     </body>
 </html>
