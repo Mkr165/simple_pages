@@ -115,7 +115,7 @@
     outline:0;
 } 
 
-@media (min-width: 550px) {
+@media (max-width: 550px) {
     .back span{
         display: none;
     }
