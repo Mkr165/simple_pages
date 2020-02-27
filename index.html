@@ -120,10 +120,10 @@
             </div>
             <div class="pergunta" id="res1">
                 <div class="conteudo ">
-                    <span>1.1.1.1</span>
+                    <span class="respspan">1.1.1.1</span>
                     <p>Dispõe de alvará de funcionamento válido expedido pelo órgão competente?</p> 
                     <div class="buttons container wrap">
-                        <button id="sim5" value="sim5" onclick="colorebtn(this.id)" class="button">SIM</button> 
+                        <button id="sim5" value="sim5" onclick="colorebtn(this.id)" class="button sim">SIM</button> 
                         <button id="nao5" value ="nao5" onclick="colorebtn(this.id)" class="button">NÃO</button>
                     </div>
                     <hr> 
@@ -168,8 +168,10 @@
                 aux=rests;
                 rests=rests-i;
                 aux=aux-rests;
-                document.getElementById('pg_restantes').innerHTML = "("+rests+")"; 
+                if(rests>=0 && aux>=0){
+                document.getElementById('pg_restantes').innerHTML = "("+rests+")";
                 document.getElementById('pg_respondidas').innerHTML = "("+aux+")"; 
+                }                 
                 div.classList.remove("display");
                 div2.classList.add("display");
                 div3.classList.add("display");
